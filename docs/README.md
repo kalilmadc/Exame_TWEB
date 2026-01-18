@@ -44,6 +44,18 @@ npx http-server ./docs -p 8000
 
 ## 📚 Conteúdo Disponível
 
+### HTML (20 valores)
+- ✅ Conceitos Fundamentais
+- ✅ Elementos e Atributos
+- ✅ Estrutura do Documento
+- ✅ Tags Semânticas
+- ✅ Listas e Sublistas
+- ✅ Tabelas
+- ✅ Formulários
+- ✅ Navegação e Hiperligações
+- ✅ Embedded Content
+- ✅ Questões práticas resolvidas
+
 ### CSS (20 valores)
 - ✅ Conceitos Fundamentais
 - ✅ Ligação CSS/HTML
@@ -98,7 +110,12 @@ Edite `styles.css` e altere os valores de cores:
   <!-- Conteúdo aqui -->
 </div>
 ```
-
+## 🔄 Atualizado para incluir:
+✅ Página completa de HTML
+✅ Conteúdo de HTML5 e tags semânticas
+✅ Exemplos de código formatados
+✅ Menu navegável com 3 disciplinas
+✅ Índices interativos com scroll automático
 ## 📱 Suporte a Navegadores
 
 - ✅ Chrome 90+
@@ -127,4 +144,6 @@ Sinta-se livre para adaptar e expandir o conteúdo conforme necessário!
 ---
 
 **Última Atualização:** Janeiro 2026
-**Versão:** 1.0.0
+**Versão:** 1.1.0
+**Cotação Total:** 60 valores (HTML 20 + CSS 20 + JavaScript 20)
+**Duração Total:** 270 minutos (4,5 horas)

@@ -16,6 +16,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="html">HTML</a></li>
                 <li><a href="#" class="nav-link" data-page="css">CSS</a></li>
                 <li><a href="#" class="nav-link" data-page="javascript">JavaScript</a></li>
             </ul>
@@ -33,6 +34,17 @@
                     <p>Tecnologias Web - Material de Estudo</p>
                 </div>
                 <div class="intro-content">
+                    <div class="card">
+                        <h2>🏷️ HTML</h2>
+                        <p>HyperText Markup Language - Simulado Completo</p>
+                        <ul>
+                            <li>Conceitos Fundamentais</li>
+                            <li>Elementos e Atributos</li>
+                            <li>Tags Semânticas</li>
+                            <li>Formulários e Navegação</li>
+                        </ul>
+                        <button class="btn" onclick="navigateTo('html')">Estudar HTML →</button>
+                    </div>
                     <div class="card">
                         <h2>📘 CSS</h2>
                         <p>Folhas de Estilo em Cascata - Simulado Completo</p>
@@ -57,9 +69,350 @@
                     </div>
                 </div>
                 <div class="info-section">
-                    <h3>📊 Cotação Total: 40 valores</h3>
-                    <p>CSS (20 valores) + JavaScript (20 valores)</p>
-                    <p><strong>Duração Sugerida:</strong> 180 minutos (90 + 90)</p>
+                    <h3>📊 Cotação Total: 60 valores</h3>
+                    <p>HTML (20 valores) + CSS (20 valores) + JavaScript (20 valores)</p>
+                    <p><strong>Duração Sugerida:</strong> 270 minutos (90 + 90 + 90)</p>
+                </div>
+            </div>
+
+            <!-- HTML Page -->
+            <div id="html" class="page">
+                <div class="page-header">
+                    <h1>🏷️ HTML - HyperText Markup Language</h1>
+                    <p>Simulado Completo - 20 Valores</p>
+                </div>
+                <div class="content-wrapper">
+                    <div class="toc">
+                        <h3>📑 Índice</h3>
+                        <ul>
+                            <li><a href="#html-1">1. HTML e Web Standards</a></li>
+                            <li><a href="#html-2">2. HTML vs HTML5</a></li>
+                            <li><a href="#html-3">3. Elementos, Tags e Atributos</a></li>
+                            <li><a href="#html-4">4. Estrutura do Documento</a></li>
+                            <li><a href="#html-5">5. Tags Semânticas</a></li>
+                            <li><a href="#html-6">6. Estrutura Base</a></li>
+                            <li><a href="#html-7">7. Listas e Sublistas</a></li>
+                            <li><a href="#html-8">8. Tabelas</a></li>
+                            <li><a href="#html-9">9. Navegação e Hiperligações</a></li>
+                            <li><a href="#html-10">10. Formulários</a></li>
+                            <li><a href="#html-11">11. Embedded Content</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <section id="html-1">
+                            <h2>1. HTML e Web Standards (1,5 valores)</h2>
+                            <article>
+                                <h3>a) Definição e papel do HTML</h3>
+                                <p><strong>HTML:</strong> HyperText Markup Language - Linguagem de marcação de hipertexto utilizada para criar e estruturar páginas web.</p>
+                                <p><strong>Papel na arquitetura web:</strong></p>
+                                <ul>
+                                    <li>Fornece a estrutura fundamental e o conteúdo base</li>
+                                    <li>Define a camada de conteúdo/estrutura</li>
+                                    <li>Trabalha em conjunto com CSS (apresentação) e JavaScript (interatividade)</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Camada da aplicação web</h3>
+                                <p>HTML insere-se na <strong>camada de estrutura/conteúdo</strong> (Content Layer) da arquitetura web.</p>
+                            </article>
+                        </section>
+
+                        <section id="html-2">
+                            <h2>2. HTML vs HTML5 (1,5 valores)</h2>
+                            <article>
+                                <h3>a) "Evolution, not Revolution"</h3>
+                                <p>O HTML5 representa uma <strong>evolução</strong>, não uma revolução:</p>
+                                <ul>
+                                    <li>Baseia-se nas versões anteriores</li>
+                                    <li>Mantém compatibilidade com código antigo</li>
+                                    <li>Introduz novas funcionalidades de forma incremental</li>
+                                    <li>Melhora gradual, não radical</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Duas melhorias do HTML5</h3>
+                                <ul>
+                                    <li><strong>Novas tags semânticas:</strong> header, nav, article, section, footer, etc.</li>
+                                    <li><strong>Suporte nativo para áudio e vídeo:</strong> &lt;audio&gt; e &lt;video&gt;</li>
+                                    <li>Validação de formulários nativa</li>
+                                    <li>Canvas para desenho de gráficos</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="html-3">
+                            <h2>3. Elementos, Tags e Atributos (2 valores)</h2>
+                            <article>
+                                <h3>a) Tag vs Elemento</h3>
+                                <p><strong>Tag:</strong> Marcadores que definem o início e o fim de um elemento</p>
+                                <p><strong>Elemento:</strong> A estrutura completa formada pela tag inicial, conteúdo e tag final</p>
+                                <div class="code-block">
+                                    <pre><code>&lt;p&gt;Este é um parágrafo&lt;/p&gt;
+       ↑ Tag      ↑ Elemento      ↑ Tag</code></pre>
+                                </div>
+                            </article>
+                            <article>
+                                <h3>b) Elementos normais vs Empty Elements</h3>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Elementos Normais</th>
+                                            <th>Empty Elements</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Possuem conteúdo</td>
+                                            <td>Não possuem conteúdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Têm tag inicial e final</td>
+                                            <td>Só têm uma tag</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Exemplos: &lt;p&gt;, &lt;div&gt;</td>
+                                            <td>Exemplos: &lt;img&gt;, &lt;br&gt;, &lt;hr&gt;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                            <article>
+                                <h3>c) Atributos id e class</h3>
+                                <p><strong>id:</strong></p>
+                                <ul>
+                                    <li>Único em toda a página</li>
+                                    <li>Só pode ter o mesmo nome uma vez</li>
+                                    <li>Usado para seleção específica</li>
+                                </ul>
+                                <p><strong>class:</strong></p>
+                                <ul>
+                                    <li>Múltiplo, pode repetir-se</li>
+                                    <li>Um elemento pode ter várias classes</li>
+                                    <li>Usado para aplicar estilos a vários elementos</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="html-4">
+                            <h2>4. Estrutura de um Documento HTML (2 valores)</h2>
+                            <article>
+                                <h3>Elementos Principais</h3>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Elemento</th>
+                                            <th>Função</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                                            <td>Declara a versão do HTML (HTML5)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;html&gt;</code></td>
+                                            <td>Raiz do documento, delimitador principal</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;head&gt;</code></td>
+                                            <td>Cabeçalho com metadados e configurações</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;body&gt;</code></td>
+                                            <td>Corpo com o conteúdo visível</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                            <article>
+                                <h3>Dois elementos importantes no head</h3>
+                                <ul>
+                                    <li><strong>&lt;meta&gt;:</strong> Define metadados (charset, viewport, etc.)</li>
+                                    <li><strong>&lt;title&gt;:</strong> Define o título da página</li>
+                                    <li>&lt;link&gt;: Liga ficheiros externos (CSS)</li>
+                                    <li>&lt;script&gt;: Incorpora código JavaScript</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="html-5">
+                            <h2>5. Tags Semânticas (1 valor)</h2>
+                            <article>
+                                <h3>a) O que são tags semânticas?</h3>
+                                <p>Tags semânticas são marcadores que possuem significado e contexto próprio, transmitindo informação sobre o tipo de conteúdo que encerram. Têm formatação padrão dependendo do seu significado.</p>
+                            </article>
+                            <article>
+                                <h3>b) Exemplos e vantagens</h3>
+                                <ul>
+                                    <li><strong>&lt;header&gt;:</strong> Cabeçalho da página</li>
+                                    <li><strong>&lt;nav&gt;:</strong> Agrupamento de links de navegação</li>
+                                    <li><strong>&lt;footer&gt;:</strong> Rodapé da página</li>
+                                    <li><strong>&lt;article&gt;:</strong> Conteúdo independente</li>
+                                    <li><strong>&lt;section&gt;:</strong> Secção temática</li>
+                                </ul>
+                                <p><strong>Vantagens:</strong> Melhor semântica, melhor acessibilidade, melhor SEO, código mais legível e menos necessidade de atribuir classes CSS.</p>
+                            </article>
+                        </section>
+
+                        <section id="html-6">
+                            <h2>6. Estrutura Base de um Documento HTML5 (2 valores)</h2>
+                            <article>
+                                <h3>Exemplo Prático</h3>
+                                <div class="code-block">
+                                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-PT"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tecnologias Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Introdução ao HTML&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="html-7">
+                            <h2>7. Listas e Sublistas (2 valores)</h2>
+                            <article>
+                                <h3>Estrutura Correta de Listas Aninhadas</h3>
+                                <div class="code-block">
+                                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Frontend
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                </div>
+                                <p><strong>Nota:</strong> A sublista deve estar <strong>dentro</strong> do &lt;li&gt; que a contém.</p>
+                            </article>
+                        </section>
+
+                        <section id="html-8">
+                            <h2>8. Tabelas (2,5 valores)</h2>
+                            <article>
+                                <h3>Estrutura Completa de uma Tabela</h3>
+                                <div class="code-block">
+                                    <pre><code>&lt;table&gt;
+    &lt;caption&gt;Informação de Alunos&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nome&lt;/th&gt;
+            &lt;th&gt;Curso&lt;/th&gt;
+            &lt;th&gt;Ano&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ana&lt;/td&gt;
+            &lt;td&gt;EI&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;João&lt;/td&gt;
+            &lt;td&gt;EI&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                                </div>
+                                <p><strong>Elementos:</strong></p>
+                                <ul>
+                                    <li><code>&lt;caption&gt;</code>: Título da tabela</li>
+                                    <li><code>&lt;thead&gt;</code>: Cabeçalho da tabela</li>
+                                    <li><code>&lt;tbody&gt;</code>: Corpo da tabela</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="html-9">
+                            <h2>9. Navegação e Hiperligações (2 valores)</h2>
+                            <article>
+                                <h3>Tipos de Ligações</h3>
+                                <p><strong>a) Ligação Absoluta (URL completa):</strong></p>
+                                <div class="code-block">
+                                    <pre><code>&lt;a href="https://www.isec.pt"&gt;ISEC - Portugal&lt;/a&gt;</code></pre>
+                                </div>
+                                <p><strong>b) Ligação Relativa (para outro ficheiro local):</strong></p>
+                                <div class="code-block">
+                                    <pre><code>&lt;a href="contactos.html"&gt;Contactos&lt;/a&gt;</code></pre>
+                                </div>
+                                <p><strong>c) Âncora (navegação interna):</strong></p>
+                                <div class="code-block">
+                                    <pre><code>&lt;a href="#topo"&gt;Voltar ao topo&lt;/a&gt;</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="html-10">
+                            <h2>10. Formulários (2,5 valores)</h2>
+                            <article>
+                                <h3>Exemplo Completo de Formulário</h3>
+                                <div class="code-block">
+                                    <pre><code>&lt;form action="/submit_page" method="POST"&gt;
+    &lt;label for="name"&gt;Nome (obrigatório):&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+
+    &lt;label for="email"&gt;Email (validação automática):&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;label for="date"&gt;Data (intervalo 2025-01-01 a 2025-12-31):&lt;/label&gt;
+    &lt;input type="date" id="date" name="date" 
+           min="2025-01-01" max="2025-12-31"&gt;
+
+    &lt;input type="submit" value="Submeter"&gt;
+&lt;/form&gt;</code></pre>
+                                </div>
+                                <p><strong>Atributos importantes:</strong></p>
+                                <ul>
+                                    <li><code>required</code>: Campo obrigatório</li>
+                                    <li><code>type="email"</code>: Validação automática de email</li>
+                                    <li><code>min/max</code>: Limites de data</li>
+                                    <li><code>method="POST"</code>: Método de submissão</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="html-11">
+                            <h2>11. Embedded Content (1 valor)</h2>
+                            <article>
+                                <h3>Tag &lt;iframe&gt;</h3>
+                                <p><strong>Função:</strong> Incorpora outro documento HTML dentro do documento atual, criando uma janela para exibir conteúdo externo.</p>
+                                <p><strong>Situação prática:</strong> Incorporar vídeos do YouTube, Google Maps, ou outras páginas web dentro do site.</p>
+                                <div class="code-block">
+                                    <pre><code>&lt;iframe 
+    src="https://www.youtube.com/embed/video_id" 
+    width="560" 
+    height="315" 
+    frameborder="0"&gt;
+&lt;/iframe&gt;</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="html-bonus">
+                            <h2>⭐ Bónus - Clean HTML e Otimização (1 valor)</h2>
+                            <article>
+                                <h3>Boas Práticas de Clean HTML</h3>
+                                <ul>
+                                    <li><strong>Semântica correta:</strong> Usar tags apropriadas para cada tipo de conteúdo</li>
+                                    <li><strong>Indentação e organização:</strong> Código bem estruturado e legível</li>
+                                    <li>Comentários significativos</li>
+                                    <li>Nomeação consistente de IDs e classes</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>Técnica de Otimização HTML</h3>
+                                <p><strong>Minificação do código:</strong> Remover espaços, quebras de linha e comentários desnecessários, reduzindo o tamanho do ficheiro e melhorando o tempo de carregamento.</p>
+                            </article>
+                        </section>
+                    </div>
                 </div>
             </div>
 

@@ -41,7 +41,9 @@ b) Explique o que é um **evento** e dê dois exemplos.
 a) Explique a diferença entre `var`, `let` e `const`.  
  - O 'var' é visível no código todo, já o 'let' só é visível apenas no bloco onde foi criada, e o 'const' não permite a alteração do valor inicial da variável.
 b) Distinga **Primitive Types** de **Reference Types**, indicando um exemplo de cada.
- - 
+ - Os dois declaram variáveis, mas Primitive armazena como dados simples e contêm diretamente os valores que
+lhe são atribuídos: var color="red";. Já Reference armazena como objetos e não guardam o objeto diretamente na
+variável: var obj=new Object();.
 
 ---
 
@@ -50,6 +52,18 @@ b) Distinga **Primitive Types** de **Reference Types**, indicando um exemplo de 
 Explique o conceito de **scope** em JavaScript e o comportamento da keyword `this` quando usada:
 - Num método de um objeto  
 - Numa função genérica  
+ - Scope refere-se à acebilidade e visibilidade de variáveis e funções em diferentes partes do código JavaScript.
+ Em método de um objeto: this refere o objeto proprietário
+const obj = {
+  name: "João",
+  greet: function() {
+    console.log(this.name); // "João"
+  }
+}
+Em função genérica: this refere o objeto global (window)
+function greet() {
+  console.log(this); // window (em browser)
+}
 
 ---
 
@@ -65,6 +79,20 @@ com a mensagem:
 A função deve estar definida:
 - a) Num **script embebido**
 - b) Num **script externo**
+a)<button onclick="mensagem()">Clique aqui</button>
+<script>
+  function mensagem()
+  {
+    alert("JavaScript em execução!");
+  }
+</script>
+b)<button onclick="mensagem()">Clique aqui</button>
+<script src="script.js"></script>
+// ficheiro script.js
+function mensagem()
+  {
+    alert("JavaScript em execução!");
+  }
 
 ---
 
@@ -83,6 +111,17 @@ Crie um script que:
 | <60 | F |
 
 Mostre o resultado na consola.
+let score=85;
+if (score>=90)
+{console.log("Classificação: A");}
+else if (score>=80 && score<90)
+{console.log("Classificação: B");}
+else if (score>=70 && score<80)
+{console.log("Classificação: C");}
+else if (score>=60 && score<70)
+{console.log("Classificação: D");}
+else
+{console.log("Classificação: F");}
 
 ---
 
@@ -90,9 +129,15 @@ Mostre o resultado na consola.
 
 a) Declare um array com os valores:  
 `'mercedes', 'volvo', 'bmw', 'audi', 'kia', 'fiat'`
+const cars=['mercedes', 'volvo', 'bmw', 'audi', 'kia', 'fiat'];
 
 b) Crie um novo array contendo **apenas os elementos das posições pares** do array original.  
+
 c) Utilize um ciclo `for` e o método `push()`.
+const pares=[];
+for(let i=0; i<cars.length; i+=2)
+{pares.push(cars[i]);}
+console.log(pares);
 
 ---
 
@@ -113,6 +158,16 @@ Copiar código
 Mostre na consola:
 - O objeto completo
 - O valor do imposto para um coeficiente de `0.05`
+const carro={
+  marca: 'BMW',
+  cilindrada: 2000,
+  combustivel: 'gasoleo',
+  calcularIuc: function(coeficiente){
+    return this.cilindrada*coeficiente;
+  }
+};
+console.log(carro);
+console.log("IUC: "+carro.calcularIuc(0.05));
 
 ---
 
@@ -131,6 +186,29 @@ Crie uma **arrow function** `estatisticasNumeros` que:
 Teste a função com o array:
 ```js
 [10, 5, 8, 20, 3]
+const estatisticasNumeros = (num) =>{
+  if (num.length === 0) {
+    return null;}
+    let soma=0;
+    let menor=num[0];
+    let maior=num[0];
+    for (let i=0; i<num.length; i++){
+      soma+=num[i];
+      if(num[i]<menor)
+      menor=num[i];
+    if(num[i]>maior)
+      maior=num[i];
+    }
+    let media=soma/num.length;
+    return{
+      maior: maior,
+      menor: menor,
+      soma: soma,
+      media: media
+    };
+};
+const resultado = estatisticasNumeros([10, 5, 8, 20, 3]);
+console.log(resultado);
 ⭐ Questão Extra – Classes e Herança (Bónus – 1 valor)
 Crie uma classe Robot com:
 
@@ -142,6 +220,17 @@ matlab
 Copiar código
 Robot model XR-22 has 89% battery remaining.
 Instancie um objeto da classe e invoque o método.
+class Robot{
+  constructor(model,batteryLevel){
+    this.model=model;
+    this.batteryLevel=batteryLevel;
+  }
+  status(){
+    console.log('Robot model ${this.model} has ${this.batteryLevel}% battery remaing.');
+  }
+}
+const robot=new Robot("XR-22",89);
+robot.status();
 🔚 Fim do Simulado
 
 ---

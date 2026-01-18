@@ -2,6 +2,7 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('.page');
 
+// Inicializar event listeners
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -25,29 +26,31 @@ function navigateTo(pageName) {
     if (activePage) {
         activePage.classList.add('active');
         activePage.scrollTop = 0;
+    } else {
+        console.warn(`Página não encontrada: ${pageName}`);
     }
 
-    // Scroll para o topo
-    document.querySelector('.main-content').scrollTop = 0;
+    // Scroll para o topo do conteúdo
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.scrollTop = 0;
+    }
 }
 
-// Animações de scroll suave
-document.querySelectorAll('.toc a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+// Animações de scroll suave para links do índice
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toc a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
     });
 });
 
 // Função auxiliar para navegação via botão
 window.navigateTo = navigateTo;
-
-// Highlight de código (opcional, se usar highlight.js)
-// document.querySelectorAll('code').forEach(block => {
-//     hljs.highlightElement(block);
-// });
