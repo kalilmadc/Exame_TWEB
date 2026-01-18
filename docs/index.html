@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologias Web - Estudo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navegação Lateral -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>🌐 TWEB</h1>
+                <p>Tecnologias Web</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="css">CSS</a></li>
+                <li><a href="#" class="nav-link" data-page="javascript">JavaScript</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>📚 Simulados de Estudo</p>
+            </div>
+        </nav>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Home -->
+            <div id="home" class="page active">
+                <div class="page-header">
+                    <h1>Bem-vindo ao Portal de Estudo</h1>
+                    <p>Tecnologias Web - Material de Estudo</p>
+                </div>
+                <div class="intro-content">
+                    <div class="card">
+                        <h2>📘 CSS</h2>
+                        <p>Folhas de Estilo em Cascata - Simulado Completo</p>
+                        <ul>
+                            <li>Conceitos Fundamentais</li>
+                            <li>Seletores e Especificidade</li>
+                            <li>Box Model</li>
+                            <li>Flexbox e Layouts</li>
+                        </ul>
+                        <button class="btn" onclick="navigateTo('css')">Estudar CSS →</button>
+                    </div>
+                    <div class="card">
+                        <h2>⚙️ JavaScript</h2>
+                        <p>Linguagem de Script - Simulado Completo</p>
+                        <ul>
+                            <li>Conceitos Fundamentais</li>
+                            <li>Variáveis e Tipos de Dados</li>
+                            <li>Objetos e Métodos</li>
+                            <li>Funções e Arrow Functions</li>
+                        </ul>
+                        <button class="btn" onclick="navigateTo('javascript')">Estudar JavaScript →</button>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <h3>📊 Cotação Total: 40 valores</h3>
+                    <p>CSS (20 valores) + JavaScript (20 valores)</p>
+                    <p><strong>Duração Sugerida:</strong> 180 minutos (90 + 90)</p>
+                </div>
+            </div>
+
+            <!-- CSS Page -->
+            <div id="css" class="page">
+                <div class="page-header">
+                    <h1>📘 CSS - Cascading Style Sheets</h1>
+                    <p>Simulado Completo - 20 Valores</p>
+                </div>
+                <div class="content-wrapper">
+                    <div class="toc">
+                        <h3>📑 Índice</h3>
+                        <ul>
+                            <li><a href="#css-1">1. Conceitos Fundamentais</a></li>
+                            <li><a href="#css-2">2. Ligação CSS/HTML</a></li>
+                            <li><a href="#css-3">3. Seletores CSS</a></li>
+                            <li><a href="#css-4">4. Especificidade e Conflitos</a></li>
+                            <li><a href="#css-5">5. Herança</a></li>
+                            <li><a href="#css-6">6. Seletores e Formatação</a></li>
+                            <li><a href="#css-7">7. Pseudo-classes e Pseudo-elementos</a></li>
+                            <li><a href="#css-8">8. Box Model</a></li>
+                            <li><a href="#css-9">9. Display e Layouts</a></li>
+                            <li><a href="#css-10">10. Flexbox</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <section id="css-1">
+                            <h2>1. CSS – Conceitos Fundamentais (1,5 valores)</h2>
+                            <article>
+                                <h3>a) Papel do CSS no desenvolvimento</h3>
+                                <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para controlar a apresentação visual de documentos na web (HTML/XML), definindo cores, fontes, layouts e espaçamentos, separando o conteúdo da sua aparência para criar páginas responsivas e esteticamente agradáveis.</p>
+                                <p>Ele funciona em conjunto com o HTML, permitindo estilizar elementos através de:</p>
+                                <ul>
+                                    <li><strong>Regras:</strong> Conjuntos de propriedades</li>
+                                    <li><strong>Seletores:</strong> Tags, classes, IDs</li>
+                                    <li><strong>Propriedades/Valores:</strong> color: red;</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Duas vantagens de ficheiros CSS externos</h3>
+                                <ul>
+                                    <li><strong>Aplicação centralizada:</strong> Uma única mudança afeta múltiplos documentos HTML</li>
+                                    <li><strong>Manutenção simplificada:</strong> Alterações centralizadas, menos erros, maior uniformidade</li>
+                                    <li><strong>Performance:</strong> Arquivo cacheado pelo navegador</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="css-2">
+                            <h2>2. Ligação CSS / HTML (1,5 valores)</h2>
+                            <article>
+                                <h3>a) Três formas de aplicar CSS</h3>
+                                <ol>
+                                    <li><strong>External Style Sheet:</strong> Ficheiro externo com tag <code>&lt;link&gt;</code></li>
+                                    <li><strong>Embedded Style Sheet:</strong> Dentro da tag <code>&lt;style&gt;</code> no HTML</li>
+                                    <li><strong>Inline Style:</strong> Diretamente no atributo <code>style</code> do elemento</li>
+                                </ol>
+                            </article>
+                            <article>
+                                <h3>b) Forma mais eficiente em performance</h3>
+                                <p><strong>External Style Sheet</strong> é a mais eficiente porque:</p>
+                                <ul>
+                                    <li>Alterações centralizadas num único ficheiro</li>
+                                    <li>Arquivo cacheado pelo navegador</li>
+                                    <li>Reutilizável em múltiplas páginas</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="css-3">
+                            <h2>3. Seletores CSS (2 valores)</h2>
+                            <article>
+                                <h3>Tipos de Seletores</h3>
+                                <table class="selector-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Seletor</th>
+                                            <th>Descrição</th>
+                                            <th>Contexto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>p span</code></td>
+                                            <td>Descendente</td>
+                                            <td>Seleciona todos os <code>span</code> dentro de <code>p</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>p &gt; span</code></td>
+                                            <td>Filho direto</td>
+                                            <td>Seleciona <code>span</code> que seja filho direto de <code>p</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>p + span</code></td>
+                                            <td>Irmão adjacente</td>
+                                            <td>Seleciona o primeiro <code>span</code> após <code>p</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>p ~ span</code></td>
+                                            <td>Irmã geral</td>
+                                            <td>Seleciona todos os <code>span</code> após <code>p</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+
+                        <section id="css-4">
+                            <h2>4. Especificidade e Conflitos (2 valores)</h2>
+                            <article>
+                                <h3>a) O que é Especificidade?</h3>
+                                <p>A especificidade em CSS determina qual regra é aplicada quando há conflitos. A regra mais específica tem prioridade.</p>
+                            </article>
+                            <article>
+                                <h3>b) Ordem crescente de especificidade</h3>
+                                <table class="specificity-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Seletor</th>
+                                            <th>Especificidade</th>
+                                            <th>Justificação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>p</code></td>
+                                            <td>1</td>
+                                            <td>Seletor simples, afeta todos os p</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>div p</code></td>
+                                            <td>2</td>
+                                            <td>Seletor descendente, mais específico</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>.menu p</code></td>
+                                            <td>11</td>
+                                            <td>Classe + elemento, ainda mais específico</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>#content p</code></td>
+                                            <td>101</td>
+                                            <td>ID é o mais específico de todos</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+
+                        <section id="css-5">
+                            <h2>5. Herança em CSS (1 valor)</h2>
+                            <article>
+                                <h3>Conceito de Herança</h3>
+                                <p><strong>Quando ocorre:</strong> Quando um elemento filho não tem um estilo definido, mas o elemento pai tem. O filho herda as propriedades do pai.</p>
+                                <p><strong>Quando NÃO ocorre:</strong> Quando o elemento filho tem o seu próprio estilo definido, a herança do pai é ignorada.</p>
+                            </article>
+                        </section>
+
+                        <section id="css-6">
+                            <h2>6. Seletores e Conflitos de Formatação (3 valores)</h2>
+                            <article>
+                                <h3>Exemplo Prático</h3>
+                                <div class="code-block">
+                                    <pre><code>&lt;div id="box"&gt;
+  &lt;p class="text"&gt;CSS &lt;span&gt;Selectors&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+CSS:
+p { color: blue; }
+#box p { color: green; }
+p.text span { color: red; }</code></pre>
+                                </div>
+                                <p><strong>a) Cor do texto "CSS":</strong> Verde (aplicada por <code>#box p</code>)</p>
+                                <p><strong>b) Cor do texto "Selectors":</strong> Vermelho (aplicada por <code>p.text span</code>)</p>
+                                <p><strong>Justificação:</strong> <code>p.text span</code> é mais específica do que <code>#box p</code>.</p>
+                            </article>
+                        </section>
+
+                        <section id="css-7">
+                            <h2>7. Pseudo-classes e Pseudo-elementos (2,5 valores)</h2>
+                            <article>
+                                <h3>a) Diferença</h3>
+                                <ul>
+                                    <li><strong>Pseudo-classes (:):</strong> Baseadas no estado do elemento (ex: :hover, :focus)</li>
+                                    <li><strong>Pseudo-elementos (::):</strong> Referem-se a elementos fictícios da estrutura (ex: ::before, ::after)</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Exemplos</h3>
+                                <div class="code-block">
+                                    <pre><code>/* Alterar cor ao passar o rato */
+li:hover {
+    background-color: orange;
+}
+
+/* Inserir conteúdo antes */
+li::before {
+    content: '→ ';
+}</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="css-8">
+                            <h2>8. Box Model (3 valores)</h2>
+                            <article>
+                                <h3>Cálculo de Largura</h3>
+                                <div class="code-block">
+                                    <pre><code>div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+  box-sizing: content-box;
+}</code></pre>
+                                </div>
+                                <p><strong>a) Com content-box:</strong></p>
+                                <p>Largura total = width + padding(2x) + border(2x)</p>
+                                <p>= 200 + 20 + 20 + 5 + 5 = <strong>250px</strong></p>
+                                <p>(Margin não conta para a largura do elemento)</p>
+                                <p><strong>b) Com border-box:</strong></p>
+                                <p>Largura total = <strong>200px</strong> (padding e border inclusos dentro do width)</p>
+                            </article>
+                        </section>
+
+                        <section id="css-9">
+                            <h2>9. Display e Layouts (2 valores)</h2>
+                            <article>
+                                <h3>a) Diferenças</h3>
+                                <ul>
+                                    <li><strong>display: block:</strong> Elementos em vertical, ocupam toda a largura</li>
+                                    <li><strong>display: inline:</strong> Elementos numa única linha, width/height ignorados</li>
+                                    <li><strong>display: inline-block:</strong> Numa linha, mas com width e height definíveis</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Caso de uso para inline-block</h3>
+                                <p>Criar menus horizontais com altura e largura personalizáveis para cada item.</p>
+                            </article>
+                        </section>
+
+                        <section id="css-10">
+                            <h2>10. Flexbox (1,5 valores)</h2>
+                            <article>
+                                <h3>Container Flexível</h3>
+                                <div class="code-block">
+                                    <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+                                </div>
+                                <p><strong>a) justify-content:</strong></p>
+                                <p>Define alinhamento ao longo do main axis. Com <code>space-between</code>:</p>
+                                <ul>
+                                    <li>Primeiro item no início</li>
+                                    <li>Último item no fim</li>
+                                    <li>Restantes distribuídos com espaçamento igual</li>
+                                </ul>
+                                <p><strong>b) align-items:</strong></p>
+                                <p>Define alinhamento ao longo do cross axis. Com <code>center</code>: todos os itens centrados verticalmente.</p>
+                            </article>
+                            <article>
+                                <h3>Vantagens do Flexbox</h3>
+                                <ul>
+                                    <li>Alinhamento simples e intuitivo</li>
+                                    <li>Responsividade nativa</li>
+                                    <li>Melhor do que float ou display: block</li>
+                                </ul>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript Page -->
+            <div id="javascript" class="page">
+                <div class="page-header">
+                    <h1>⚙️ JavaScript - Linguagem de Script</h1>
+                    <p>Simulado Completo - 20 Valores</p>
+                </div>
+                <div class="content-wrapper">
+                    <div class="toc">
+                        <h3>📑 Índice</h3>
+                        <ul>
+                            <li><a href="#js-1">1. Linguagens de Script</a></li>
+                            <li><a href="#js-2">2. Execução no Browser</a></li>
+                            <li><a href="#js-3">3. Objetos e Eventos</a></li>
+                            <li><a href="#js-4">4. Variáveis e Tipos</a></li>
+                            <li><a href="#js-5">5. Scope e this</a></li>
+                            <li><a href="#js-6">6. Scripts e Eventos</a></li>
+                            <li><a href="#js-7">7. Variáveis e Condicionais</a></li>
+                            <li><a href="#js-8">8. Arrays e Loops</a></li>
+                            <li><a href="#js-9">9. Objetos e Métodos</a></li>
+                            <li><a href="#js-10">10. Funções e Arrow Functions</a></li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <section id="js-1">
+                            <h2>1. JavaScript e Linguagens de Script (1,5 valores)</h2>
+                            <article>
+                                <h3>a) O que é uma linguagem de script?</h3>
+                                <p>Uma linguagem de script é uma linguagem de programação que suporta scripts, que são programas escritos para um sistema de tempo de execução especial que automatiza a execução de tarefas.</p>
+                                <p>O código é <strong>interpretado</strong> por outro programa em tempo de execução, em vez de ser compilado diretamente para código de máquina.</p>
+                                <p>Aplicações:</p>
+                                <ul>
+                                    <li>Automatizar tarefas em páginas web</li>
+                                    <li>Adicionar interatividade</li>
+                                    <li>Controlar sistemas operacionais</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Diferenças entre interpretadas e compiladas</h3>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Interpretadas</th>
+                                            <th>Compiladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Execução linha por linha</td>
+                                            <td>Compilação prévia para código máquina</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mais fáceis de aprender</td>
+                                            <td>Mais rápidas em execução</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Exemplos: Python, JavaScript</td>
+                                            <td>Exemplos: C, C++</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+
+                        <section id="js-2">
+                            <h2>2. Execução de JavaScript no Browser (1,5 valores)</h2>
+                            <article>
+                                <h3>a) Quando e como executar</h3>
+                                <p>JavaScript é executado quando o navegador faz download do HTML e encontra uma tag <code>&lt;script&gt;</code>.</p>
+                                <p>Pode estar em:</p>
+                                <ul>
+                                    <li><code>&lt;head&gt;</code>: Executa antes do body carregar</li>
+                                    <li><code>&lt;body&gt;</code>: Executa em ordem</li>
+                                    <li>Ficheiro externo: Com tag <code>&lt;script src=""&gt;</code></li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>b) Vantagens do defer ou colocar no final do body</h3>
+                                <p><strong>Benefícios:</strong></p>
+                                <ul>
+                                    <li>Maximiza performance (evita render blocking)</li>
+                                    <li>Com <code>defer</code>: Download paralelo, execução após HTML completo</li>
+                                    <li>Página carrega mais rapidamente</li>
+                                    <li>Melhor experiência do utilizador</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="js-3">
+                            <h2>3. Conceitos Fundamentais: Objeto e Evento (2 valores)</h2>
+                            <article>
+                                <h3>a) Definição de Objeto</h3>
+                                <p>Objeto é uma estrutura em JavaScript que serve para:</p>
+                                <ul>
+                                    <li>Armazenar dados</li>
+                                    <li>Estruturar a aplicação</li>
+                                    <li>Deixar o código mais limpo e modular</li>
+                                </ul>
+                                <p><strong>Principais componentes:</strong></p>
+                                <ol>
+                                    <li><strong>Identidade:</strong> Nome único do objeto</li>
+                                    <li><strong>Propriedades:</strong> Características/atributos</li>
+                                    <li><strong>Métodos:</strong> Funções que o objeto executa</li>
+                                </ol>
+                            </article>
+                            <article>
+                                <h3>b) O que é um Evento?</h3>
+                                <p>Evento é uma ação detetada pelo JavaScript que provoca uma execução específica, chamando uma função com o respetivo evento.</p>
+                                <p><strong>Exemplos:</strong></p>
+                                <ul>
+                                    <li><code>click</code>: Clique do rato</li>
+                                    <li><code>dblclick</code>: Duplo clique</li>
+                                    <li><code>mouseover</code>: Passar o rato</li>
+                                    <li><code>submit</code>: Submissão de formulário</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="js-4">
+                            <h2>4. Variáveis e Tipos de Dados (2 valores)</h2>
+                            <article>
+                                <h3>a) Diferença entre var, let e const</h3>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>var</th>
+                                            <th>let</th>
+                                            <th>const</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Visível em todo o código</td>
+                                            <td>Visível apenas no bloco</td>
+                                            <td>Visível apenas no bloco</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pode ser reatribuída</td>
+                                            <td>Pode ser reatribuída</td>
+                                            <td>NÃO pode ser alterada</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoisting complexo</td>
+                                            <td>Temporal Dead Zone</td>
+                                            <td>Temporal Dead Zone</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                            <article>
+                                <h3>b) Primitive Types vs Reference Types</h3>
+                                <p><strong>Primitive Types:</strong> Valores armazenados diretamente na memória</p>
+                                <ul>
+                                    <li>Exemplos: number (42), string ("hello"), boolean (true), undefined, null</li>
+                                </ul>
+                                <p><strong>Reference Types:</strong> Referências para objetos na memória</p>
+                                <ul>
+                                    <li>Exemplos: Object ({}), Array ([1,2,3]), Function</li>
+                                </ul>
+                            </article>
+                        </section>
+
+                        <section id="js-5">
+                            <h2>5. Scope e Keyword this (1 valor)</h2>
+                            <article>
+                                <h3>Conceito de Scope</h3>
+                                <p>Scope é o contexto no qual uma variável está disponível para uso. Define o acesso e a visibilidade de variáveis.</p>
+                                <p><strong>Tipos:</strong></p>
+                                <ul>
+                                    <li><strong>Global:</strong> Acessível de qualquer lugar</li>
+                                    <li><strong>Function:</strong> Acessível apenas dentro da função</li>
+                                    <li><strong>Block:</strong> Acessível apenas no bloco (let, const)</li>
+                                </ul>
+                            </article>
+                            <article>
+                                <h3>Comportamento de this</h3>
+                                <p><strong>Em método de um objeto:</strong> <code>this</code> refere o objeto proprietário</p>
+                                <div class="code-block">
+                                    <pre><code>const obj = {
+  name: "João",
+  greet: function() {
+    console.log(this.name); // "João"
+  }
+}</code></pre>
+                                </div>
+                                <p><strong>Em função genérica:</strong> <code>this</code> refere o objeto global (window)</p>
+                                <div class="code-block">
+                                    <pre><code>function greet() {
+  console.log(this); // window (em browser)
+}</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-6">
+                            <h2>6. Inserção de Scripts e Eventos (2 valores)</h2>
+                            <article>
+                                <h3>Exercício: Botão com Alert</h3>
+                                <p><strong>a) Script Embebido:</strong></p>
+                                <div class="code-block">
+                                    <pre><code>&lt;button onclick="mostrarMensagem()"&gt;Clique aqui&lt;/button&gt;
+
+&lt;script&gt;
+function mostrarMensagem() {
+  alert("JavaScript em execução!");
+}
+&lt;/script&gt;</code></pre>
+                                </div>
+                                <p><strong>b) Script Externo:</strong></p>
+                                <div class="code-block">
+                                    <pre><code>&lt;button onclick="mostrarMensagem()"&gt;Clique aqui&lt;/button&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+// No ficheiro script.js:
+function mostrarMensagem() {
+  alert("JavaScript em execução!");
+}</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-7">
+                            <h2>7. Variáveis, Operadores e Condicionais (2,5 valores)</h2>
+                            <article>
+                                <h3>Conversão de Pontuação</h3>
+                                <div class="code-block">
+                                    <pre><code>let score = 85; // Exemplo
+
+if (score >= 90 && score <= 100) {
+  console.log("Classificação: A");
+} else if (score >= 80 && score < 90) {
+  console.log("Classificação: B");
+} else if (score >= 70 && score < 80) {
+  console.log("Classificação: C");
+} else if (score >= 60 && score < 70) {
+  console.log("Classificação: D");
+} else {
+  console.log("Classificação: F");
+}</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-8">
+                            <h2>8. Arrays e Loops (2,5 valores)</h2>
+                            <article>
+                                <h3>Exercício Prático</h3>
+                                <p><strong>a) Declarar array:</strong></p>
+                                <div class="code-block">
+                                    <pre><code>const carros = ['mercedes', 'volvo', 'bmw', 'audi', 'kia', 'fiat'];</code></pre>
+                                </div>
+                                <p><strong>b) Extrair elementos pares:</strong></p>
+                                <div class="code-block">
+                                    <pre><code>const pares = [];
+for (let i = 0; i < carros.length; i += 2) {
+  pares.push(carros[i]);
+}
+console.log(pares); // ['mercedes', 'bmw', 'kia']</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-9">
+                            <h2>9. Objetos e Métodos (2,5 valores)</h2>
+                            <article>
+                                <h3>Objeto Carro com Método</h3>
+                                <div class="code-block">
+                                    <pre><code>const carro = {
+  marca: "Toyota",
+  cilindrada: 1800,
+  combustivel: "Gasolina",
+  calcularIuc: function(coeficiente) {
+    return this.cilindrada * coeficiente;
+  }
+};
+
+console.log(carro);
+console.log("IUC: " + carro.calcularIuc(0.05)); // 90</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-10">
+                            <h2>10. Funções e Arrow Functions (2,5 valores)</h2>
+                            <article>
+                                <h3>Arrow Function com Estatísticas</h3>
+                                <div class="code-block">
+                                    <pre><code>const estatisticasNumeros = (arr) => {
+  if (arr.length === 0) {
+    return null;
+  }
+  
+  return {
+    maior: Math.max(...arr),
+    menor: Math.min(...arr),
+    soma: arr.reduce((a, b) => a + b, 0),
+    media: arr.reduce((a, b) => a + b, 0) / arr.length
+  };
+};
+
+const resultado = estatisticasNumeros([10, 5, 8, 20, 3]);
+console.log(resultado);
+// {maior: 20, menor: 3, soma: 46, media: 9.2}</code></pre>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section id="js-bonus">
+                            <h2>⭐ Bónus - Classes e Herança (1 valor)</h2>
+                            <article>
+                                <h3>Classe Robot</h3>
+                                <div class="code-block">
+                                    <pre><code>class Robot {
+  constructor(model, batteryLevel) {
+    this.model = model;
+    this.batteryLevel = batteryLevel;
+  }
+  
+  status() {
+    console.log(`Robot ${this.model} has ${this.batteryLevel}% battery remaining.`);
+  }
+}
+
+const robot = new Robot("XR-22", 89);
+robot.status(); // Robot XR-22 has 89% battery remaining.</code></pre>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
